@@ -114,7 +114,7 @@ public class CapacitorVideoPlayer extends Plugin {
                 if (url.equals("internal")) {
                     createPickerVideoFragment(call);
                 } else if (url.substring(0, 12).equals("application/")) {
-                    videoPath = context.getFilesDir() + url.replace("application", "");
+                    videoPath = url.replace("application", "");
                     File file = new File(videoPath);
                     if (!file.exists()) {
                         Map<String, Object> info = new HashMap<String, Object>() {

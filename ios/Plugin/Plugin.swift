@@ -114,7 +114,7 @@ public class CapacitorVideoPlayer: CAPPlugin {
 
         if String(videoPath.prefix(11)) == "application" {
             let path: String = String(videoPath.dropFirst(12))
-            let vPath: String = docPath.appendingFormat("/\(path)")
+            let vPath: String = path
             if !isFileExists(filePath: vPath) {
                 print("*** video file does not exist at path \n \(vPath) \n***")
                 let info: [String: Any] = ["dismiss": true]
