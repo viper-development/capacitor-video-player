@@ -248,12 +248,13 @@ export class VideoPlayer {
             else {
                 vType = this._url.match(/(.*)\.(.*)/)[2].split('?')[0];
             }
-            switch (vType) {
+            switch (vType && vType.toLowerCase()) {
                 case 'mp4':
                 case '':
                 case 'webm':
                 case 'cmaf':
                 case 'cmfv':
+                case 'mov':
                 case 'cmfa': {
                     this._videoType = 'video/mp4';
                     //                this._videoClass = "video-js";
